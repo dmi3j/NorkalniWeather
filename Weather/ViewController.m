@@ -11,7 +11,7 @@
 #import "Weather.h"
 #import "WeatherService.h"
 
-@interface ViewController ()
+@interface ViewController () <UINavigationControllerDelegate, UIImagePickerControllerDelegate>
 
 @property (weak, nonatomic) IBOutlet UILabel *temperatureLabel;
 @property (weak, nonatomic) IBOutlet UILabel *conditionLabel;
@@ -57,6 +57,13 @@
     [self refreshData];
 }
 
+- (IBAction)changeWallpaper:(id)sender {
+    UIImagePickerController *imagePickerController = [[UIImagePickerController alloc] init];
+    imagePickerController.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
+    imagePickerController.delegate = self;
+    [self presentViewController:imagePickerController animated:YES completion:nil];
+}
+
 - (void)refreshData{
     self.refreshButton.hidden = YES;
     [self.activityIndicator startAnimating];
@@ -79,6 +86,16 @@
             [self.activityIndicator stopAnimating];
         });
     }];
+}
+
+
+- (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info
+{
+    UIImage *image = [info valueForKey:UIImagePickerControllerOriginalImage];
+
+    self.backgroundImageView.image = image;
+
+    [picker dismissViewControllerAnimated:YES completion:nil];
 }
 
 @end

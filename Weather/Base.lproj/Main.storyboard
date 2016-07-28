@@ -61,17 +61,28 @@
                                     <constraint firstAttribute="width" constant="50" id="yNh-hj-lBG"/>
                                 </constraints>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1V2-nh-l6V">
+                                <rect key="frame" x="20" y="562" width="102" height="30"/>
+                                <state key="normal" title="Сменить обои">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="changeWallpaper:" destination="BYZ-38-t0r" eventType="touchUpInside" id="uMM-Ee-w8n"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="djM-7y-Byv" firstAttribute="leading" secondItem="JKX-wk-Mmh" secondAttribute="trailing" constant="8" symbolic="YES" id="1Xx-s6-7SC"/>
                             <constraint firstItem="djM-7y-Byv" firstAttribute="top" secondItem="JKX-wk-Mmh" secondAttribute="top" id="6jn-kg-pxE"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="1V2-nh-l6V" secondAttribute="bottom" constant="8" symbolic="YES" id="BxD-9g-Q4I"/>
                             <constraint firstItem="FXs-Xa-qK1" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="-50" id="E97-no-0B8"/>
                             <constraint firstItem="ueI-JP-2WG" firstAttribute="centerY" secondItem="IRf-Lv-Yu4" secondAttribute="centerY" id="ElW-6S-S2g"/>
                             <constraint firstItem="djM-7y-Byv" firstAttribute="trailing" secondItem="eTL-xy-0IQ" secondAttribute="trailing" id="Jcy-hD-Gtr"/>
                             <constraint firstItem="djM-7y-Byv" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" constant="79" id="NWY-6a-VhR"/>
                             <constraint firstItem="FXs-Xa-qK1" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="-50" id="ZiG-Vs-lSD"/>
                             <constraint firstItem="eTL-xy-0IQ" firstAttribute="top" secondItem="4mq-JH-s7A" secondAttribute="bottom" constant="8" symbolic="YES" id="bBv-CD-UdW"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="IRf-Lv-Yu4" secondAttribute="bottom" constant="8" symbolic="YES" id="d51-Yv-FuY"/>
                             <constraint firstItem="djM-7y-Byv" firstAttribute="trailing" secondItem="4mq-JH-s7A" secondAttribute="trailing" id="eGx-z8-AoQ"/>
                             <constraint firstAttribute="bottom" secondItem="FXs-Xa-qK1" secondAttribute="bottom" constant="-50" id="pZs-Im-u6a"/>
                             <constraint firstItem="4mq-JH-s7A" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="20" id="r9r-xa-nWf"/>
@@ -79,7 +90,7 @@
                             <constraint firstItem="ueI-JP-2WG" firstAttribute="centerX" secondItem="IRf-Lv-Yu4" secondAttribute="centerX" id="u6E-jC-toL"/>
                             <constraint firstAttribute="trailingMargin" secondItem="djM-7y-Byv" secondAttribute="trailing" constant="20" id="uQG-Bx-8lJ"/>
                             <constraint firstAttribute="trailing" secondItem="FXs-Xa-qK1" secondAttribute="trailing" constant="-50" id="ukG-ab-9Va"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="IRf-Lv-Yu4" secondAttribute="bottom" constant="8" symbolic="YES" id="vlh-dm-2cB"/>
+                            <constraint firstItem="1V2-nh-l6V" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="v77-bQ-UbI"/>
                             <constraint firstItem="4mq-JH-s7A" firstAttribute="top" secondItem="JKX-wk-Mmh" secondAttribute="bottom" constant="8" symbolic="YES" id="yBd-VE-cVN"/>
                         </constraints>
                     </view>

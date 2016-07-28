@@ -7,6 +7,8 @@
 //
 
 #import <XCTest/XCTest.h>
+#import "WeatherService.h"
+#import "Weather.h"
 
 @interface WeatherTests : XCTestCase
 
@@ -27,6 +29,11 @@
 - (void)testExample {
     // This is an example of a functional test case.
     // Use XCTAssert and related functions to verify your tests produce the correct results.
+
+    [WeatherService getWeather:^(Weather *weather) {
+        XCTAssert(weather.localizedCondition.length > 0, @"No weather condition received");
+        XCTAssert(weather.localizedTemperature.length > 0, @"No weather temperature received");
+    }];
 }
 
 - (void)testPerformanceExample {
