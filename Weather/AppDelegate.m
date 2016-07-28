@@ -8,8 +8,8 @@
 
 #import "AppDelegate.h"
 
-#import "WeatherService.h"
-#import "Weather.h"
+#import <WeatherFramework/Weather.h>
+#import <WeatherFramework/WeatherService.h>
 
 @interface AppDelegate ()
 

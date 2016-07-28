@@ -8,8 +8,8 @@
 
 #import "ViewController.h"
 
-#import "Weather.h"
-#import "WeatherService.h"
+#import <WeatherFramework/Weather.h>
+#import <WeatherFramework/WeatherService.h>
 
 @interface ViewController () <UINavigationControllerDelegate, UIImagePickerControllerDelegate>
 
@@ -87,7 +87,6 @@
         });
     }];
 }
-
 
 - (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info
 {

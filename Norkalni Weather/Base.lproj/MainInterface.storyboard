@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="M4Y-Lb-cyx">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <scenes>
+        <!--Today View Controller-->
+        <scene sceneID="cwh-vc-ff4">
+            <objects>
+                <viewController id="M4Y-Lb-cyx" customClass="TodayViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Ft6-oW-KC0"/>
+                        <viewControllerLayoutGuide type="bottom" id="FKl-LY-JtV"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" simulatedAppContext="notificationCenter" id="S3S-Oj-5AN">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="82"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="23" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kgP-zb-SIp">
+                                <rect key="frame" x="263" y="8" width="21" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="BvO-fM-eZb">
+                                <rect key="frame" x="16" y="16" width="50" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="50" id="KMe-tY-LuJ"/>
+                                    <constraint firstAttribute="height" constant="50" id="Osh-vX-fdu"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="дождь" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rU6-TU-k08">
+                                <rect key="frame" x="261" y="53" width="51" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="℃" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8ga-3d-vog">
+                                <rect key="frame" x="292" y="8" width="20" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="20" id="pSe-qD-l5m"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="BvO-fM-eZb" firstAttribute="leading" secondItem="S3S-Oj-5AN" secondAttribute="leading" constant="16" id="49c-Nc-epN"/>
+                            <constraint firstItem="FKl-LY-JtV" firstAttribute="top" secondItem="BvO-fM-eZb" secondAttribute="bottom" constant="16" id="Gwk-1l-Fkn"/>
+                            <constraint firstItem="BvO-fM-eZb" firstAttribute="top" secondItem="Ft6-oW-KC0" secondAttribute="bottom" constant="16" id="Pzt-Dx-n7C"/>
+                            <constraint firstItem="8ga-3d-vog" firstAttribute="centerY" secondItem="kgP-zb-SIp" secondAttribute="centerY" id="ZeL-vU-awN"/>
+                            <constraint firstItem="FKl-LY-JtV" firstAttribute="top" secondItem="rU6-TU-k08" secondAttribute="bottom" constant="8" id="bsP-o5-tJW"/>
+                            <constraint firstItem="8ga-3d-vog" firstAttribute="top" secondItem="Ft6-oW-KC0" secondAttribute="bottom" constant="8" id="dgg-Xo-8aD"/>
+                            <constraint firstItem="8ga-3d-vog" firstAttribute="leading" secondItem="kgP-zb-SIp" secondAttribute="trailing" constant="8" symbolic="YES" id="eLc-oc-1Q7"/>
+                            <constraint firstAttribute="trailing" secondItem="8ga-3d-vog" secondAttribute="trailing" constant="8" id="rbX-r7-C3y"/>
+                            <constraint firstAttribute="trailing" secondItem="rU6-TU-k08" secondAttribute="trailing" constant="8" id="wng-TT-pbn"/>
+                        </constraints>
+                    </view>
+                    <extendedEdge key="edgesForExtendedLayout"/>
+                    <nil key="simulatedStatusBarMetrics"/>
+                    <nil key="simulatedTopBarMetrics"/>
+                    <nil key="simulatedBottomBarMetrics"/>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="320" height="82"/>
+                    <connections>
+                        <outlet property="conditionImage" destination="BvO-fM-eZb" id="Ad9-St-XBe"/>
+                        <outlet property="conditionLabel" destination="rU6-TU-k08" id="J3T-6h-VEQ"/>
+                        <outlet property="temperatureLabel" destination="kgP-zb-SIp" id="Qzu-UJ-xEn"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vXp-U4-Rya" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="516" y="285"/>
+        </scene>
+    </scenes>
+</document>
