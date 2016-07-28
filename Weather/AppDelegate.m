@@ -21,10 +21,9 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
 
-    [WeatherService getWeather:^(Weather *weather) {
-        //
-        NSLog(@"temperature %@ and %@", weather.localizedTemperature, weather.localizedCondition);
-    }];
+//    [WeatherService getWeather:^(Weather *weather) {
+//        NSLog(@"temperature %@ and %@", weather.localizedTemperature, weather.localizedCondition);
+//    }];
     return YES;
 }
 

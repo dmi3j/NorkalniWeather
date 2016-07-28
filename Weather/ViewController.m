@@ -46,6 +46,11 @@
 
     [self.backgroundImageView addMotionEffect:group];
 
+    NSData *archivedWallpaper = [NSData dataWithContentsOfFile:[self filePath]];
+    UIImage *image = [NSKeyedUnarchiver unarchiveObjectWithData:archivedWallpaper];
+    if (image) {
+        self.backgroundImageView.image = image;
+    }
 }
 
 - (void)didReceiveMemoryWarning {
@@ -88,13 +93,21 @@
     }];
 }
 
-- (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info
-{
+- (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info {
     UIImage *image = [info valueForKey:UIImagePickerControllerOriginalImage];
 
     self.backgroundImageView.image = image;
 
+    NSData *data = [NSKeyedArchiver archivedDataWithRootObject:image];
+    [data writeToFile:[self filePath] atomically:YES];
+
     [picker dismissViewControllerAnimated:YES completion:nil];
+}
+
+- (NSString *)filePath {
+    NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+    NSString *documentsDirectory = [paths objectAtIndex:0];
+    return [NSString stringWithFormat:@"%@/%@", documentsDirectory, @"wallpaper"];
 }
 
 @end
