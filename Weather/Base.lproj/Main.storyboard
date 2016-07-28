@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="wallpaper" translatesAutoresizingMaskIntoConstraints="NO" id="FXs-Xa-qK1">
+                                <rect key="frame" x="-50" y="-50" width="700" height="700"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="20.0" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JKX-wk-Mmh">
+                                <rect key="frame" x="429" y="79" width="83" height="48"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="℃" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="djM-7y-Byv">
+                                <rect key="frame" x="520" y="79" width="40" height="36"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="40" id="Z7l-tS-0d7"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="засуха" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4mq-JH-s7A">
+                                <rect key="frame" x="40" y="135" width="520" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IRf-Lv-Yu4">
+                                <rect key="frame" x="510" y="562" width="70" height="30"/>
+                                <state key="normal" title="Обновить">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="refreshButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Hb1-3Q-1yS"/>
+                                </connections>
+                            </button>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="white" translatesAutoresizingMaskIntoConstraints="NO" id="ueI-JP-2WG">
+                                <rect key="frame" x="535" y="567" width="20" height="20"/>
+                            </activityIndicatorView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="eTL-xy-0IQ">
+                                <rect key="frame" x="510" y="164" width="50" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="fbk-nm-bcI"/>
+                                    <constraint firstAttribute="width" constant="50" id="yNh-hj-lBG"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="djM-7y-Byv" firstAttribute="leading" secondItem="JKX-wk-Mmh" secondAttribute="trailing" constant="8" symbolic="YES" id="1Xx-s6-7SC"/>
+                            <constraint firstItem="djM-7y-Byv" firstAttribute="top" secondItem="JKX-wk-Mmh" secondAttribute="top" id="6jn-kg-pxE"/>
+                            <constraint firstItem="FXs-Xa-qK1" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="-50" id="E97-no-0B8"/>
+                            <constraint firstItem="ueI-JP-2WG" firstAttribute="centerY" secondItem="IRf-Lv-Yu4" secondAttribute="centerY" id="ElW-6S-S2g"/>
+                            <constraint firstItem="djM-7y-Byv" firstAttribute="trailing" secondItem="eTL-xy-0IQ" secondAttribute="trailing" id="Jcy-hD-Gtr"/>
+                            <constraint firstItem="djM-7y-Byv" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" constant="79" id="NWY-6a-VhR"/>
+                            <constraint firstItem="FXs-Xa-qK1" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="-50" id="ZiG-Vs-lSD"/>
+                            <constraint firstItem="eTL-xy-0IQ" firstAttribute="top" secondItem="4mq-JH-s7A" secondAttribute="bottom" constant="8" symbolic="YES" id="bBv-CD-UdW"/>
+                            <constraint firstItem="djM-7y-Byv" firstAttribute="trailing" secondItem="4mq-JH-s7A" secondAttribute="trailing" id="eGx-z8-AoQ"/>
+                            <constraint firstAttribute="bottom" secondItem="FXs-Xa-qK1" secondAttribute="bottom" constant="-50" id="pZs-Im-u6a"/>
+                            <constraint firstItem="4mq-JH-s7A" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="20" id="r9r-xa-nWf"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="IRf-Lv-Yu4" secondAttribute="trailing" id="sB9-G1-HAF"/>
+                            <constraint firstItem="ueI-JP-2WG" firstAttribute="centerX" secondItem="IRf-Lv-Yu4" secondAttribute="centerX" id="u6E-jC-toL"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="djM-7y-Byv" secondAttribute="trailing" constant="20" id="uQG-Bx-8lJ"/>
+                            <constraint firstAttribute="trailing" secondItem="FXs-Xa-qK1" secondAttribute="trailing" constant="-50" id="ukG-ab-9Va"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="IRf-Lv-Yu4" secondAttribute="bottom" constant="8" symbolic="YES" id="vlh-dm-2cB"/>
+                            <constraint firstItem="4mq-JH-s7A" firstAttribute="top" secondItem="JKX-wk-Mmh" secondAttribute="bottom" constant="8" symbolic="YES" id="yBd-VE-cVN"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="activityIndicator" destination="ueI-JP-2WG" id="Pnn-yR-k3N"/>
+                        <outlet property="backgroundImageView" destination="FXs-Xa-qK1" id="ipd-Cj-iID"/>
+                        <outlet property="conditionImage" destination="eTL-xy-0IQ" id="ZJv-dt-Vz8"/>
+                        <outlet property="conditionLabel" destination="4mq-JH-s7A" id="0c6-Rv-anC"/>
+                        <outlet property="refreshButton" destination="IRf-Lv-Yu4" id="6uv-yx-pq7"/>
+                        <outlet property="temperatureLabel" destination="JKX-wk-Mmh" id="L3t-VS-vPc"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="554" y="334"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="wallpaper" width="1365" height="2048"/>
+    </resources>
+</document>
